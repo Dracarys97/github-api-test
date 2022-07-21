@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app'
 
 import "../src/Components/buttons-component/Buttons.scss"
-import '../src/Page/Users/Users.scss'
+import './users.scss'
 import '../src/Components/form-component/user-form/User-form.scss';
-import '../src/Page/Repositories/Repositories.scss'
+import './repositories.scss'
 import '../src/Components/form-component/repository-form/Repository-form.scss';
 import '../src/Components/list-component/List.scss';
 import 'bootstrap/dist/css/bootstrap.css'
