@@ -1,6 +1,6 @@
 import Moment from "moment";
 import { IRepository } from "../../Interfaces/GithubApi";
-import './List.scss';
+
 function List(props:any){
     const repos:IRepository[] = props.repos;
     Moment.locale('en');

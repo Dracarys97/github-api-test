@@ -33,12 +33,12 @@
     flex-direction: column;
     
 }
-.form-check{
+.custom-form-check{
     @media(max-width:600px){
-        padding-left: 0;
+        padding-left: 0 !important;
     }
 }
-.form-check-input{
+.custom-check{
     margin-left: 0rem !important;
 
 }

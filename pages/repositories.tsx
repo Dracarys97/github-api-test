@@ -1,13 +1,15 @@
 import axios from 'axios'
+import { useRouter } from 'next/router';
+import React from 'react';
 import { useState } from 'react';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
-import RepositoryForm from '../../Components/form-component/repository-form/Repository-form';
-import List from '../../Components/list-component/List';
-import { IRepository } from '../../Interfaces/GithubApi';
-import './Repositories.scss'
+import RepositoryForm from '../src/Components/form-component/repository-form/Repository-form';
+import List from '../src/Components/list-component/List';
+import { IRepository } from '../src/Interfaces/GithubApi';
+
 
 function Repositories(){ 
-    let navigate:NavigateFunction = useNavigate();
+    const router = useRouter()
+    
     const [repositories, setRepositories] = useState<IRepository[]>()
     
     const urlRepo = 'https://api.github.com/repos/';
@@ -46,7 +48,7 @@ function Repositories(){
         })
     }
     function handleBack(){
-        navigate("/",{replace:true});
+        router.push("/")
     }
     return(
         <div className='repositories'>

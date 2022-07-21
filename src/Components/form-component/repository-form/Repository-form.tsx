@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import { Button } from "../../buttons-component/button/Button";
-import './Repository-form.scss';
+
 function RepositoryForm(props:any){
     const handleSearch = props.searchFunc;
     const [searchUser, setSearchUser] = useState<string>("");
@@ -22,11 +22,11 @@ function RepositoryForm(props:any){
                         </input>
                         
                     </div>
-                    <div className="flex-horizontal form-check">
+                    <div className="flex-horizontal form-check custom-form-check">
                         <div className="form__container__label">
                             Is an organization?
                         </div>
-                        <input type="checkbox" className="form-check-input" checked={ownerType} onChange = {e => setOwnerType(e.target.checked)}></input>
+                        <input type="checkbox" className="form-check-input custom-check" checked={ownerType} onChange = {e => setOwnerType(e.target.checked)}></input>
                     </div>
                 </div>
                 <div className="form__container__label">

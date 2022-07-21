@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../../buttons-component/button/Button";
-import './User-form.scss';
+
 function UserForm(props:any){
     const handleSearch = props.searchFunc;
     const [searchValue, setSearchValue] = useState<string>("");

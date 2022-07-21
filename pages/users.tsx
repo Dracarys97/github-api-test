@@ -1,14 +1,14 @@
 import axios from 'axios'
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
-import UserForm from '../../Components/form-component/user-form/User-form';
-import {IUser} from '../../Interfaces/GithubApi';
-import './Users.scss'
+import UserForm from '../src/Components/form-component/user-form/User-form';
+import {IUser} from '../src/Interfaces/GithubApi';
+
 
 
 function Users(){
    
-    let navigate:NavigateFunction = useNavigate();
+    const router = useRouter()
     const [user, setUser] = useState<IUser>()
     
     const url = 'https://api.github.com/users/';
@@ -22,7 +22,7 @@ function Users(){
         })
     }
     function handleBack(){
-        navigate("/",{replace:true});
+        router.push("/")
     }
     return(
         <div className='users'>
@@ -48,7 +48,7 @@ function Users(){
                     </div>
                     <div className='users__table__row'>
                         <div className='users__table__row__user-info'>
-                            {user?.name}
+                            {user?.name?user?.name:"Unknown"}
                         </div>
                         <div className='users__table__row__user-info'>
                             {user?.public_repos}

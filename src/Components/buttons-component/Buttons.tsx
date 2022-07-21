@@ -1,14 +1,14 @@
-import './Buttons.scss';
-import { NavigateFunction, useNavigate } from 'react-router-dom';
+
+import { useRouter } from 'next/router';
 import { Button } from './button/Button';
 
 function Buttons() {
-    let navigate:NavigateFunction = useNavigate();
+    const router = useRouter()
     function handleUsers(){
-        navigate("/users",{replace:true});
+        router.push("/users")
     }
     function handleRepositories(){
-        navigate("/repositories",{replace:true});
+        router.push("/repositories")
     }
     return (
         <div className='buttons'>
