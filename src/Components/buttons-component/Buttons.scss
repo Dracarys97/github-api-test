@@ -1,0 +1,13 @@
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-top: 28rem;
+    @media(max-width:600px){
+      padding-top: 20rem;
+    }
+    &__button{
+      margin-bottom: 20px;
+      
+    }
+  }

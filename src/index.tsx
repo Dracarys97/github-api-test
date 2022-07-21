@@ -3,13 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Users from './Page/Users/Users';
+import Repositories from './Page/Repositories/Repositories';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<App/>}>    
+          </Route>
+          <Route path="/users" element={<Users/>}>
+          </Route>
+          <Route path="/repositories" element ={<Repositories/>}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
   </React.StrictMode>
 );
 

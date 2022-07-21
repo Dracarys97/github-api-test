@@ -1,0 +1,44 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 10rem;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media(max-width:600px){
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+        &__label{
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        &__input{
+            margin-bottom: 12px;
+        }
+        &__user{
+            display: flex;
+            @media(max-width:600px){
+                flex-direction: column;
+            }
+        }
+    }
+}
+.flex-horizontal{
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-check{
+    @media(max-width:600px){
+        padding-left: 0;
+    }
+}
+.form-check-input{
+    margin-left: 0rem !important;
+
+}

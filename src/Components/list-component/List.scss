@@ -1,0 +1,41 @@
+.list{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__table{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        padding-left: 4rem;
+        overflow-x: auto;
+        overflow-y: scroll;
+        &__row{
+            display: grid;
+            grid-template-columns: 15em 10em 30em 10em 10em;
+            grid-gap: 5px;
+            width: min-content;
+            &__title{
+                font-weight: 600;
+                font-size: 16px;
+                margin-bottom: 0.5rem;
+                white-space: nowrap;
+            }
+            &__user-info{
+                font-weight: 14px;
+                white-space: nowrap;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+        @media(max-width:600px){
+            width: 80%;
+            padding-left: 0rem;
+        }
+        
+    }
+}
+.background{
+    background-color: lightgray;
+}

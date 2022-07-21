@@ -1,0 +1,20 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 10rem;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__label{
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        &__input{
+            margin-bottom: 12px;
+        }
+    }
+}
