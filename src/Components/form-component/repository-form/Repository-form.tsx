@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import { Button } from "../../buttons-component/button/Button";
-
+import PropTypes from 'prop-types'
 function RepositoryForm(props:any){
     const handleSearch = props.searchFunc;
     const [searchUser, setSearchUser] = useState<string>("");
@@ -41,5 +41,9 @@ function RepositoryForm(props:any){
             </div>
         </form>
     )
+    
+}
+RepositoryForm.propTypes = {
+    searchFunc: PropTypes.func.isRequired
 }
 export default RepositoryForm;

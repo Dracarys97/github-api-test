@@ -1,6 +1,6 @@
 import Moment from "moment";
 import { IRepository } from "../../Interfaces/GithubApi";
-
+import PropTypes from 'prop-types'
 function List(props:any){
     const repos:IRepository[] = props.repos;
     Moment.locale('en');
@@ -60,5 +60,8 @@ function List(props:any){
 
         </div>
     )
+}
+List.propTypes = {
+    repos:PropTypes.array.isRequired
 }
 export default List;

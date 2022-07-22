@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../../buttons-component/button/Button";
-
+import PropTypes from 'prop-types'
 function UserForm(props:any){
     const handleSearch = props.searchFunc;
     const [searchValue, setSearchValue] = useState<string>("");
@@ -22,5 +22,8 @@ function UserForm(props:any){
             </div>
         </form>
     )
+}
+UserForm.propType = {
+    searchFunc: PropTypes.func.isRequired
 }
 export default UserForm;

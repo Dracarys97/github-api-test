@@ -7,7 +7,7 @@ import './repositories.scss'
 import '../src/Components/form-component/repository-form/Repository-form.scss';
 import '../src/Components/list-component/List.scss';
 import 'bootstrap/dist/css/bootstrap.css'
-import '../src/App.scss'
+import './App.scss'
 import React from 'react';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

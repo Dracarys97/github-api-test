@@ -22,18 +22,21 @@ function Repositories(){
         let repos:IRepository[]=[];
         if(!repository){
             if(!type){
+                //Call to github api to search the repos of a user
                 url = urlUser+user+"/repos"
             }
             else{
+                //Call to github api to search the repos of an organization
                 url = urlOrg+user+"/repos"
             }
         }
         else{
+            //Call to github api to search a specific repo from a user
             url =urlRepo+user+"/"+repository;
             
         }
         axios.get(url).then(response => {
-            console.log(response.data)
+
             setError(false)
             if(repository){
                 repos.push(response.data)
@@ -41,7 +44,6 @@ function Repositories(){
             }else{
                 setRepositories(response.data)
             }
-            console.log(repositories)
         }).catch(e =>{
             setError(true)
             console.log(e)
