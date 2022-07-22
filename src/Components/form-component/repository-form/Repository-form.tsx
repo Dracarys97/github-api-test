@@ -10,6 +10,10 @@ function RepositoryForm(props:any){
         event.preventDefault();
         handleSearch(searchUser,ownerType,searchRepository)
     }
+    /*
+        This component requires a username to work, the user can change if the searched user is an org or not 
+        and can input a repository name to search an specific repository of the searched user
+    */
     return(
         <form className="form" onSubmit={handleSubmit}>
             <div className="form__container">

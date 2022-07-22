@@ -17,6 +17,10 @@ function Repositories(){
     const urlUser = 'https://api.github.com/users/';
 
     const [error, setError] = useState(false);
+    /*
+        This function receives username, type of the user (organization or user)
+        and an optional repository if the user wants to search an specific repository of a github user
+    */
     function searchRepositories(user:string,type:boolean,repository?:string){
         let url:string= ''
         let repos:IRepository[]=[];

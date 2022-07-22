@@ -13,6 +13,7 @@ function Users(){
     
     const url = 'https://api.github.com/users/';
     const [error, setError] = useState(false);
+    //This function takes a username a use it to call the github api for the user information
     function searchUser(value:string){
         axios.get(url+value).then(response => {
             setUser(response.data);
