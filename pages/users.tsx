@@ -26,8 +26,8 @@ function Users(){
         router.push("/")
     }
     return(
-        <div className='users'>
-            <div className='users__back' onClick={handleBack}>
+        <div className='users' id= "users">
+            <div className='users__back' data-testid="back-button" onClick={handleBack}>
                 &#8592; Atras
             </div>
             <UserForm searchFunc={searchUser}/>

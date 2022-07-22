@@ -54,7 +54,7 @@ function List(props:any){
                 })}
             </div>
             :
-            <div/>
+            <div />
             }
 
         </div>

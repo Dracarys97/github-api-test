@@ -1,6 +1,7 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import List from './List';
+import '@testing-library/jest-dom';
 
 const elementsMock = [
   {
@@ -141,8 +142,8 @@ const elementsMock = [
 }
 ]
 
-test('renders learn react link', () => {
+test('renders list component', () => {
   render(<List repos = {elementsMock}/>);
-  const name = screen.getByText('bootstrap');
+  const name = screen.getByText('Name');
   expect(name).toBeInTheDocument();
 });

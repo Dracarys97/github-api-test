@@ -29,8 +29,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "test": "next test --coverage",
+    "test": "jest --watch --coverage",
     "eject": "next eject"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "eslintConfig": {},
   "browserslist": {
@@ -47,6 +50,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.6",
-    "eslint": "^8.20.0"
+    "eslint": "^8.20.0",
+    "jest-environment-jsdom": "^28.1.3"
   }
 }

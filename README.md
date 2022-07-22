@@ -53,3 +53,11 @@ Start the server
   npm run dev
 ```
 
+
+## Run tests
+
+Run with npm
+
+```bash
+  npm run test
+```

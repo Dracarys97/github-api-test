@@ -57,8 +57,8 @@ function Repositories(){
         router.push("/")
     }
     return(
-        <div className='repositories'>
-            <div className='repositories__back' onClick={handleBack}>
+        <div className='repositories' id ="repositories">
+            <div className='repositories__back' data-testid="back-button" onClick={handleBack}>
                 &#8592; Atras
             </div>
             <RepositoryForm searchFunc={searchRepositories}/>
